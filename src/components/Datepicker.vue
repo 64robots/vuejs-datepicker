@@ -38,12 +38,38 @@
               <span
                   @click="isRtl ? nextMonth() : previousMonth()"
                   class="prev"
-                  v-bind:class="{ 'disabled' : isRtl ? nextMonthDisabled(pageTimestamp) : previousMonthDisabled(pageTimestamp) }">&lt;</span>
+                  v-bind:class="{ 'disabled' : isRtl ? nextMonthDisabled(pageTimestamp) : previousMonthDisabled(pageTimestamp) }">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="17" viewBox="0 0 23 17">
+                  <g fill="none" clip-path="url(#a)" data-name="Choose Time">
+                      <path fill="#fff" d="M-805-262H635V869H-805z"/>
+                      <use fill="#000" data-name="Vector" transform="rotate(-90 8.5 7.5)" xlink:href="#b"/>
+                  </g>
+                  <defs>
+                      <clipPath id="a">
+                          <path fill="#fff" d="M0 0h1440v1131H0z" transform="translate(-805 -262)"/>
+                      </clipPath>
+                      <path id="b" d="M6.5 21a1 1 0 1 0 2 0h-2zm1-21l.707-.707a1 1 0 0 0-1.414 0L7.5 0zM-.707 6.793A1 1 0 0 0 .707 8.207L-.707 6.793zm15 1.414a1 1 0 1 0 1.414-1.414l-1.414 1.414zM8.5 21V0h-2v21h2zM6.793-.707l-7.5 7.5L.707 8.207l7.5-7.5L6.793-.707zm0 1.414l7.5 7.5 1.414-1.414-7.5-7.5L6.793.707z"/>
+                  </defs>
+                </svg>
+              </span>
               <span @click="showMonthCalendar" :class="allowedToShowView('month') ? 'up' : ''">{{ isYmd ? currYear : currMonthName }} {{ isYmd ? currMonthName : currYear }}</span>
               <span
                   @click="isRtl ? previousMonth() : nextMonth()"
                   class="next"
-                  v-bind:class="{ 'disabled' : isRtl ? previousMonthDisabled(pageTimestamp) : nextMonthDisabled(pageTimestamp) }">&gt;</span>
+                  v-bind:class="{ 'disabled' : isRtl ? previousMonthDisabled(pageTimestamp) : nextMonthDisabled(pageTimestamp) }">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="17" viewBox="0 0 23 17">
+                  <g fill="none" clip-path="url(#a)" data-name="Choose Time">
+                      <path fill="#fff" d="M-1271-262H169V869h-1440z"/>
+                      <use fill="#000" data-name="Vector" transform="rotate(90 10.5 11.5)" xlink:href="#b"/>
+                  </g>
+                  <defs>
+                      <clipPath id="a">
+                          <path fill="#fff" d="M0 0h1440v1131H0z" transform="translate(-1271 -262)"/>
+                      </clipPath>
+                      <path id="b" d="M6.5 21a1 1 0 1 0 2 0h-2zm1-21l.707-.707a1 1 0 0 0-1.414 0L7.5 0zM-.707 6.793A1 1 0 0 0 .707 8.207L-.707 6.793zm15 1.414a1 1 0 1 0 1.414-1.414l-1.414 1.414zM8.5 21V0h-2v21h2zM6.793-.707l-7.5 7.5L.707 8.207l7.5-7.5L6.793-.707zm0 1.414l7.5 7.5 1.414-1.414-7.5-7.5L6.793.707z"/>
+                  </defs>
+                </svg>
+              </span>
           </header>
           <div :class="isRtl ? 'flex-rtl' : ''">
             <span class="cell day-header" v-for="d in daysOfWeek" :key="d.timestamp">{{ d }}</span>
@@ -67,12 +93,38 @@
               <span
                   @click="previousYear"
                   class="prev"
-                  v-bind:class="{ 'disabled' : previousYearDisabled(pageTimestamp) }">&lt;</span>
+                  v-bind:class="{ 'disabled' : previousYearDisabled(pageTimestamp) }">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="17" viewBox="0 0 23 17">
+                  <g fill="none" clip-path="url(#a)" data-name="Choose Time">
+                      <path fill="#fff" d="M-805-262H635V869H-805z"/>
+                      <use fill="#000" data-name="Vector" transform="rotate(-90 8.5 7.5)" xlink:href="#b"/>
+                  </g>
+                  <defs>
+                      <clipPath id="a">
+                          <path fill="#fff" d="M0 0h1440v1131H0z" transform="translate(-805 -262)"/>
+                      </clipPath>
+                      <path id="b" d="M6.5 21a1 1 0 1 0 2 0h-2zm1-21l.707-.707a1 1 0 0 0-1.414 0L7.5 0zM-.707 6.793A1 1 0 0 0 .707 8.207L-.707 6.793zm15 1.414a1 1 0 1 0 1.414-1.414l-1.414 1.414zM8.5 21V0h-2v21h2zM6.793-.707l-7.5 7.5L.707 8.207l7.5-7.5L6.793-.707zm0 1.414l7.5 7.5 1.414-1.414-7.5-7.5L6.793.707z"/>
+                  </defs>
+                </svg>
+              </span>
               <span @click="showYearCalendar" :class="allowedToShowView('year') ? 'up' : ''">{{ getPageYear() }}</span>
               <span
                   @click="nextYear"
                   class="next"
-                  v-bind:class="{ 'disabled' : nextYearDisabled(pageTimestamp) }">&gt;</span>
+                  v-bind:class="{ 'disabled' : nextYearDisabled(pageTimestamp) }">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="17" viewBox="0 0 23 17">
+                  <g fill="none" clip-path="url(#a)" data-name="Choose Time">
+                      <path fill="#fff" d="M-1271-262H169V869h-1440z"/>
+                      <use fill="#000" data-name="Vector" transform="rotate(90 10.5 11.5)" xlink:href="#b"/>
+                  </g>
+                  <defs>
+                      <clipPath id="a">
+                          <path fill="#fff" d="M0 0h1440v1131H0z" transform="translate(-1271 -262)"/>
+                      </clipPath>
+                      <path id="b" d="M6.5 21a1 1 0 1 0 2 0h-2zm1-21l.707-.707a1 1 0 0 0-1.414 0L7.5 0zM-.707 6.793A1 1 0 0 0 .707 8.207L-.707 6.793zm15 1.414a1 1 0 1 0 1.414-1.414l-1.414 1.414zM8.5 21V0h-2v21h2zM6.793-.707l-7.5 7.5L.707 8.207l7.5-7.5L6.793-.707zm0 1.414l7.5 7.5 1.414-1.414-7.5-7.5L6.793.707z"/>
+                  </defs>
+                </svg>
+              </span>
           </header>
           <span class="cell month"
               v-for="month in months"
@@ -88,10 +140,36 @@
       <div :class="[calendarClass, 'vdp-datepicker__calendar']" v-show="showYearView" v-bind:style="calendarStyle">
           <header>
               <span @click="previousDecade" class="prev"
-                  v-bind:class="{ 'disabled' : previousDecadeDisabled(pageTimestamp) }">&lt;</span>
+                  v-bind:class="{ 'disabled' : previousDecadeDisabled(pageTimestamp) }">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="17" viewBox="0 0 23 17">
+                  <g fill="none" clip-path="url(#a)" data-name="Choose Time">
+                      <path fill="#fff" d="M-805-262H635V869H-805z"/>
+                      <use fill="#000" data-name="Vector" transform="rotate(-90 8.5 7.5)" xlink:href="#b"/>
+                  </g>
+                  <defs>
+                      <clipPath id="a">
+                          <path fill="#fff" d="M0 0h1440v1131H0z" transform="translate(-805 -262)"/>
+                      </clipPath>
+                      <path id="b" d="M6.5 21a1 1 0 1 0 2 0h-2zm1-21l.707-.707a1 1 0 0 0-1.414 0L7.5 0zM-.707 6.793A1 1 0 0 0 .707 8.207L-.707 6.793zm15 1.414a1 1 0 1 0 1.414-1.414l-1.414 1.414zM8.5 21V0h-2v21h2zM6.793-.707l-7.5 7.5L.707 8.207l7.5-7.5L6.793-.707zm0 1.414l7.5 7.5 1.414-1.414-7.5-7.5L6.793.707z"/>
+                  </defs>
+                </svg>
+              </span>
               <span>{{ getPageDecade() }}</span>
               <span @click="nextDecade" class="next"
-                  v-bind:class="{ 'disabled' : nextMonthDisabled(pageTimestamp) }">&gt;</span>
+                  v-bind:class="{ 'disabled' : nextMonthDisabled(pageTimestamp) }">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="17" viewBox="0 0 23 17">
+                  <g fill="none" clip-path="url(#a)" data-name="Choose Time">
+                      <path fill="#fff" d="M-1271-262H169V869h-1440z"/>
+                      <use fill="#000" data-name="Vector" transform="rotate(90 10.5 11.5)" xlink:href="#b"/>
+                  </g>
+                  <defs>
+                      <clipPath id="a">
+                          <path fill="#fff" d="M0 0h1440v1131H0z" transform="translate(-1271 -262)"/>
+                      </clipPath>
+                      <path id="b" d="M6.5 21a1 1 0 1 0 2 0h-2zm1-21l.707-.707a1 1 0 0 0-1.414 0L7.5 0zM-.707 6.793A1 1 0 0 0 .707 8.207L-.707 6.793zm15 1.414a1 1 0 1 0 1.414-1.414l-1.414 1.414zM8.5 21V0h-2v21h2zM6.793-.707l-7.5 7.5L.707 8.207l7.5-7.5L6.793-.707zm0 1.414l7.5 7.5 1.414-1.414-7.5-7.5L6.793.707z"/>
+                  </defs>
+                </svg>
+            </span>
           </header>
           <span
               class="cell year"
